@@ -7,6 +7,6 @@ class Stack:
 		self.head = None
 
 	def push(self, value):
-		new_node = Node(value)
-		new_node.next_data = self.head
-		self.head = new_node
+		next_node = self.head
+		new_head = Node(value, next_node)
+		self.head = new_head

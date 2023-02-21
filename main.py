@@ -16,9 +16,14 @@ if __name__ == '__main__':
 	stack.push('data2')
 	stack.push('data3')
 
+	print('1')
 	print(stack.head.data)
+	print('2')
 	print(stack.head.next_data.data)
+	print('3')
 	print(stack.head.next_data.next_data.data)
+	print('4')
 	print(stack.head.next_data.next_data.next_data)
+	print('5')
 	print(stack.head.next_data.next_data.next_data.data)
 
