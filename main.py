@@ -1,19 +1,16 @@
-from node import Node
 from stack import Stack
+from custom_queue import Queue
+
 
 if __name__ == '__main__':
 
-	stack = Stack()
-	stack.push('data1')
-	data = stack.pop()
+	queue = Queue()
+	queue.enqueue('data1')
+	queue.enqueue('data2')
+	queue.enqueue('data3')
 
-	print(stack.head)
-	print(data)
-
-	stack = Stack()
-	stack.push('data1')
-	stack.push('data2')
-	data = stack.pop()
-
-	print(stack.head.data)
-	print(data)
+	print(queue.head.data)
+	print(queue.head.next_data.data)
+	print(queue.tail.data)
+	print(queue.tail.next_data)
+	print(queue.tail.next_data.data)
