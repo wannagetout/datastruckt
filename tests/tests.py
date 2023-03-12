@@ -25,3 +25,8 @@ class TestNode(unittest.TestCase):
 		self.assertEqual(queue.head.next_data.data, 'data2')
 		self.assertEqual(queue.tail.data, 'data3')
 		self.assertEqual(queue.tail.next_data, None)
+
+		self.assertEqual(queue.dequeue(), 'data1')
+		self.assertEqual(queue.dequeue(), 'data2')
+		self.assertEqual(queue.dequeue(), 'data3')
+		self.assertEqual(queue.dequeue(), None)
