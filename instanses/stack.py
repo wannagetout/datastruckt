@@ -1,4 +1,4 @@
-from node import Node
+from instanses.node import Node
 
 
 class Stack:

@@ -1,9 +1,8 @@
 import unittest
 
-import node
-from stack import Stack
-from node import Node
-from custom_queue import Queue
+from instanses.stack import Stack
+from instanses.custom_queue import Queue
+from instanses.linked_list import LinkedList
 
 
 class TestNode(unittest.TestCase):
@@ -30,3 +29,12 @@ class TestNode(unittest.TestCase):
 		self.assertEqual(queue.dequeue(), 'data2')
 		self.assertEqual(queue.dequeue(), 'data3')
 		self.assertEqual(queue.dequeue(), None)
+
+	def test_LinkedList(self):
+		ll = LinkedList()
+		ll.insert_beginning({'id': 1})
+		ll.insert_at_end({'id': 2})
+		ll.insert_at_end({'id': 3})
+		ll.insert_beginning({'id': 0})
+		self.assertEqual(ll.to_list(), [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}])
+		self.assertEqual(ll.get_data_by_id(2), {'id': 2})

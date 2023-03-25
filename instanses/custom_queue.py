@@ -1,6 +1,6 @@
 from typing import Any
 
-from node import Node
+from instanses.node import Node
 
 
 class Queue:
